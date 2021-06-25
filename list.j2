@@ -1,0 +1,32 @@
+{% from "macros.j2" import render_item, render_navigation with context %}
+
+{% block style %}
+  <link rel="stylesheet" href="{{ config.cdn }}ueno.css">
+{% endblock %}
+
+{% block body %}
+  <div class="body">
+    {% include "gh:typlog/ueno/_side.j2" %}
+    <div class="main">
+      <div class="inner main_mark">
+        {% if page.type == 'tag' %}
+          {% set tag = page.topic %}
+          <section class="main_head">
+            <h1>{{ tag.title }}</h1>
+            {% if tag.summary %}<h2>{{ tag.summary }}</h2>{% endif %}
+          </section>
+        {% elif page.type == 'language' %}
+          <section class="main_head">
+            <h1>{{ page.topic.name }}</h1>
+          </section>
+        {% endif %}
+        {% for subject in page.items %}
+          {{ render_item(subject) }}
+        {% endfor %}
+        {{ render_navigation(page) }}
+      </div>
+    </div>
+  </div>
+  {% include "_snippets/site_foot.j2" %}
+  {% include "_snippets/brand_foot.j2" %}
+{% endblock %}

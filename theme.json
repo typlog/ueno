@@ -1,0 +1,11 @@
+{
+  "name": "ueno",
+  "name#ja": "上野",
+  "name#zh": "上野",
+  "author": "Typlog",
+  "features": {
+    "podcast": true,
+    "review": true
+  },
+  "images": []
+}

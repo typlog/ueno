@@ -1,0 +1,45 @@
+{% from "macros.j2" import render_subject_content %}
+
+{% block style %}
+  <link rel="stylesheet" href="{{ static_url }}ueno.css">
+{% endblock %}
+
+{% block body %}
+  <div class="body">
+    {% include "gh:typlog/ueno/_side.j2" %}
+    <div class="main _episode">
+      <div class="main_mark inner">
+        <article role="main" class="h-entry" itemscope itemtype="http://schema.org/Article">
+          <div class="entry-meta">
+            {% if page.type == 'audio' %}
+              {% if page.season and page.episode %}
+                <span class="item-label">S{{ page.season }}E{{ page.episode }}</span>
+              {% endif %}
+              <span class="item-label">{{ page.duration }}</span>
+            {% endif %}
+            {% if page.published_at %}
+              <time class="dt-published" datetime="{{ page.published_at|xmldatetime }}"
+                    itemprop="datePublished">{{ page.published_at.strftime('%b %d, %Y') }}</time>
+            {% endif %}
+          </div>
+          <h1 class="p-name" itemprop="headline">{{ page.title }}</h1>
+          {% if page.subtitle %}
+            <h2 class="p-summary">{{ page.subtitle }}</h2>
+          {% endif %}
+          <div class="e-content js-content yue" itemprop="articleBody">
+            {{ render_subject_content(site, page) }}
+            {% if page.type == 'page' %}
+              {% include "_snippets/page_qr.j2" %}
+            {% endif %}
+          </div>
+        </article>
+        <div class="entry-block">
+          {% include "_snippets/subject_share.j2" %}
+        </div>
+      </div>
+      {% include "_snippets/subject_foot.j2" %}
+    </div>
+  </div>
+  {% include "_snippets/site_foot.j2" %}
+  {% include "_snippets/brand_foot.j2" %}
+{% endblock %}
