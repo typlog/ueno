@@ -3,9 +3,16 @@
   "name#ja": "上野",
   "name#zh": "上野",
   "author": "Typlog",
+  "repo": "typlog/ueno",
   "features": {
-    "podcast": true,
+    "post": true,
+    "audio": true,
     "review": true
   },
-  "images": []
+  "images": [
+      "images/1.jpg",
+      "images/2.jpg",
+      "images/3.jpg",
+      "images/4.jpg"
+  ]
 }
