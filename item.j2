@@ -1,4 +1,4 @@
-{% from "macros.j2" import render_subject_content %}
+{% from "macros.j2" import render_subject_content, render_subject_license, render_subject_collaborators %}
 
 {% block style %}
   <link rel="stylesheet" href="{{ static_url }}ueno.css">
@@ -32,7 +32,22 @@
               {% include "_snippets/page_qr.j2" %}
             {% endif %}
           </div>
+          {% if page.tags %}
+            <div class="entry-tags">
+              {% for tag in page.tags %}
+                <a class="p-category" href="{{ linkify(tag.url) }}">{{ tag.title }}</a>
+              {% endfor %}
+            </div>
+          {% endif %}
+          {% if page.collaborators %}
+            <div class="entry-collaborators">
+              {{ render_subject_collaborators(site, page) }}
+            </div>
+          {% endif %}
         </article>
+        {% if page.type != 'page' %}
+          {{ render_subject_license(site, page) }}
+        {% endif %}
         <div class="entry-block">
           {% include "_snippets/subject_share.j2" %}
         </div>
