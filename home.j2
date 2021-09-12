@@ -1,4 +1,4 @@
-{% from "macros.j2" import render_item with context %}
+{% from "macros.j2" import render_item %}
 
 {% block style %}
   <link rel="stylesheet" href="{{ static_url }}ueno.css">
@@ -6,12 +6,12 @@
 
 {% block body %}
   <div class="body">
-    {% include "gh:typlog/ueno/_side.j2" %}
+    {% include "./_side.j2" %}
     <div class="main">
       <div class="inner main_mark">
         {% set subjects = query.latest_subjects() %}
         {% for subject in subjects %}
-          {{ render_item(subject) }}
+          {{ render_item(site, subject) }}
         {% endfor %}
         <div class="home-more">
           <a href="{{ linkify('/archive/') }}">MORE →</a>
