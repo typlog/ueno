@@ -4,15 +4,13 @@
   "name#zh": "上野",
   "author": "Typlog",
   "repo": "typlog/ueno",
+  "version": "0.1.0",
   "features": {
     "post": true,
     "audio": true,
     "review": true
   },
   "images": [
-      "images/1.jpg",
-      "images/2.jpg",
-      "images/3.jpg",
-      "images/4.jpg"
+      "https://user-images.githubusercontent.com/290496/133878072-0286669c-2cc8-4976-99d2-2a59b7181bd5.png"
   ]
 }
