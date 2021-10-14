@@ -62,11 +62,9 @@
         {{ render_social_icons(site) }}
       {% endif %}
     </nav>
-    {% if features.algolia %}
-      <div class="side_search">
-        <input class="js-search" type="text" placeholder="Search..."
-               data-id="{{ site.algolia_id }}" data-key="{{ site.algolia_key }}">
-      </div>
-    {% endif %}
+    <div class="side_search">
+      <input class="js-search" type="text" placeholder="Search..."
+        {% if features.algolia %}data-id="{{ site.algolia_id }}" data-key="{{ site.algolia_key }}"{% endif %}>
+    </div>
   </div>
 </aside>
