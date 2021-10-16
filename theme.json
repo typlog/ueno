@@ -4,7 +4,7 @@
   "name#zh": "上野",
   "author": "Typlog",
   "repo": "typlog/ueno",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "features": {
     "post": true,
     "audio": true,
