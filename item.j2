@@ -1,4 +1,4 @@
-{% from "macros.j2" import render_subject_content, render_subject_license, render_subject_collaborators %}
+{% from "macros.j2" import render_subject_content, render_subject_license, render_subject_authors %}
 
 {% block style %}
   <link rel="stylesheet" href="{{ static_url }}ueno.css">
@@ -39,11 +39,7 @@
               {% endfor %}
             </div>
           {% endif %}
-          {% if page.collaborators %}
-            <div class="entry-collaborators">
-              {{ render_subject_collaborators(site, page) }}
-            </div>
-          {% endif %}
+          {{ render_subject_authors(site, page) }}
         </article>
         {% if page.type != 'page' %}
           {{ render_subject_license(site, page) }}
