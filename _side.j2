@@ -2,7 +2,7 @@
 
 <aside class="side">
   <div class="inner">
-    {% if page and page.type == 'episode_list' %}
+    {% if page and page.type == 'audio_list' and site.podcast %}
       {% set podcast = site.podcast %}
       {% if podcast.image %}
         <a class="side_logo" href="{{ linkify('/') }}"><img src="{{ podcast.image|thumbnail('ss') }}" alt="{{ podcast.title }}"></a>
