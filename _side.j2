@@ -37,9 +37,9 @@
       </div>
     {% endif %}
 
-    {% if site.nav_links %}
+    {% if site.primary_links %}
       <ul class="side_links">
-        {% for nav in site.nav_links %}
+        {% for nav in site.primary_links %}
           <li><a href="{{ nav.url }}" {% if nav.blank %} target="_blank"{% endif %}>{{ nav.title }}</a></li>
         {% endfor %}
       </ul>
