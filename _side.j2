@@ -47,7 +47,7 @@
     {% if site.podcast %}
       <ul class="side_links">
         <li class="subscribe">Subscribe</li>
-        <li><a href="{{ linkify('/episodes/feed.xml') }}"><i class="icon icon-feed" aria-hidden="true"></i><span>RSS</span></a></li>
+        <li><a href="{{ linkify('/feed/audio.xml') }}"><i class="icon icon-feed" aria-hidden="true"></i><span>RSS</span></a></li>
         {% for item in site.podcast.links %}
           <li><a href="{{ linkify(item.url) }}"{% if item.blank %} target="_blank"{% endif %}>
             <i class="icon icon-{{ item.icon }}"></i><span>{{ item.title }}</span>
