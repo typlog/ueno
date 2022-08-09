@@ -1,0 +1,23 @@
+.entry-license {
+  font-size: 14px;
+  margin: 2em 0;
+  padding: 1em 1em 1em 1.2em;
+  border-left: 3px solid var(--un-c-accent);
+  background: rgba(var(--un-rc-accent), 0.05);
+}
+.entry-license a {
+  text-decoration: none;
+}
+.entry-license i.icon {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 18px;
+}
+.entry-license .license_name {
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 600;
+}
+.entry-license .license_description {
+  margin: 0.5em 0;
+}

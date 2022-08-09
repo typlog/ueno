@@ -1,0 +1,31 @@
+.entry-share a {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  line-height: 36px;
+  color: var(--un-c-text-light);
+  background: var(--un-c-bg-weak);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.entry-share a:hover {
+  color: white;
+  background: var(--icon-color);
+}
+.entry-share a[data-type="wb"] {
+  --icon-color: #e24040;
+}
+.entry-share a[data-type="tw"] {
+  --icon-color: #1da1f2;
+}
+.entry-share a[data-type="tg"] {
+  --icon-color: #179cde;
+}
+.entry-share a[data-type="wx"] {
+  --icon-color: #20b767;
+}
+.entry-share a[data-type="fb"] {
+  --icon-color: #1877F2;
+}

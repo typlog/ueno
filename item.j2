@@ -1,13 +1,17 @@
 {% from "macros.j2" import render_subject_content, render_subject_license, render_subject_authors %}
 
 {% block style %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://s3.typlog.com/npm/@typlog/yue@1.0.0/yue.css">
   <link rel="stylesheet" href="{{ static_url }}ueno.css">
 {% endblock %}
 
 {% block body %}
   <div class="body">
     {% include "./_side.j2" %}
-    <div class="main _episode">
+    <div class="main">
       <div class="main_mark inner">
         <article role="main" class="h-entry" itemscope itemtype="http://schema.org/Article">
           <div class="entry-meta">
@@ -26,7 +30,7 @@
           {% if page.subtitle %}
             <h2 class="p-summary">{{ page.subtitle }}</h2>
           {% endif %}
-          <div class="e-content js-content yue" itemprop="articleBody">
+          <div class="e-content js-content yue dark-code" itemprop="articleBody">
             {{ render_subject_content(site, page) }}
             {% if page.type == 'page' %}
               {% include "_snippets/page_qr.j2" %}

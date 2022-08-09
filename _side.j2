@@ -1,11 +1,12 @@
 {% from "macros.j2" import render_social_icons %}
 
+{% include "_snippets/theme_toggle.j2" %}
 <aside class="side">
   <div class="inner">
     {% if page and page.type == 'audio_list' and site.podcast %}
       {% set podcast = site.podcast %}
       {% if podcast.image %}
-        <a class="side_logo" href="{{ linkify('/') }}"><img src="{{ podcast.image|thumbnail('ss') }}" alt="{{ podcast.title }}"></a>
+        <a class="side_logo" href="{{ linkify('/') }}"><img src="{{ podcast.image|thumbnail('ss') }}" alt="{{ podcast.title }}" width="120" height="120"></a>
       {% endif %}
       <h1 class="side_title"><a class="h-card" rel="me" href="{{ linkify('/') }}">{{ podcast.title }}</a></h1>
       {% if podcast.subtitle %}
@@ -17,7 +18,7 @@
       {% set author = page.topic %}
       {% if author.avatar %}
         <a class="side_logo" href="{{ linkify(author.url) }}">
-          <img src="{{ author.avatar|thumbnail('ss') }}" alt="{{ author.name }}">
+          <img src="{{ author.avatar|thumbnail('ss') }}" alt="{{ author.name }}" width="120" height="120">
         </a>
       {% endif %}
       <h1 class="side_title"><a class="h-card" rel="me" href="{{ linkify(author.url) }}">{{ author.name }}</a></h1>
@@ -26,7 +27,7 @@
       {% endif %}
     {% else %}
       {% if site.logo %}
-        <a class="side_logo" href="{{ linkify('/') }}"><img src="{{ site.logo.src|thumbnail('ss') }}" alt="{{ site.name }}"></a>
+        <a class="side_logo" href="{{ linkify('/') }}"><img src="{{ site.logo.src|thumbnail('ss') }}" alt="{{ site.name }}" width="120" height="120"></a>
       {% endif %}
       <h1 class="side_title"><a class="h-card" rel="me" href="{{ linkify('/') }}">{{ site.name }}</a></h1>
       {% if site.summary %}

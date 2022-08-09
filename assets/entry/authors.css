@@ -1,0 +1,69 @@
+.entry-authors {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.entry-authors .p-author {
+  display: flex;
+}
+.entry-authors .p-author + .p-author {
+  margin-top: 1em;
+}
+.entry-authors .author_image {
+  display: block;
+  width: 48px;
+  height: 48px;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+.entry-authors .author_image img {
+  border-radius: 50%;
+}
+.entry-authors .author_main {
+  flex-grow: 1;
+  font-size: 16px;
+}
+.entry-authors .author_meta .icon {
+  vertical-align: middle;
+}
+.entry-authors .author_bio {
+  margin-top: 5px;
+  font-size: 15px;
+  color: var(--un-c-text-light);
+}
+.entry-authors p {
+  margin: 0;
+}
+.entry-speakers {
+  display: flex;
+  margin-bottom: 24px;
+}
+.entry-speakers a {
+  display: inline-block;
+}
+.entry-speakers .host {
+  margin-right: 4em;
+}
+.entry-speakers .author_type {
+  margin-bottom: 1em;
+}
+.entry-speakers strong {
+  border-bottom: 3px solid var(--un-c-accent);
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.entry-speakers img {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+}
+.entry-author a,
+.entry-authors a,
+.entry-speakers a {
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+.entry-author a:hover,
+.entry-authors a:hover,
+.entry-speakers a:hover {
+  opacity: 0.8;
+}

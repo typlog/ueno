@@ -1,0 +1,36 @@
+.sponsorship {
+  padding: 0;
+  margin: 1em 0;
+}
+.sponsorship a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  padding: 1em 2em;
+  font-size: 14px;
+  font-weight: 600;
+  margin-right: 0.5em;
+  transition: background-color 0.2s ease;
+  box-sizing: border-box;
+}
+.sponsorship .afdian {
+  background: rgba(148, 108, 230, 0.8);
+}
+.sponsorship .afdian:hover {
+  color: white;
+  background: rgb(148, 108, 230);
+}
+.sponsorship .patreon {
+  background: rgba(232, 91, 70, 0.8);
+}
+.sponsorship .patreon:hover {
+  color: white;
+  background: rgb(232, 91, 70);
+}
+@media (max-width: 480px) {
+  .sponsorship a {
+    width: 100%;
+    text-align: center;
+    margin: 0.4em 0;
+  }
+}

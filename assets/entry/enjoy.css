@@ -1,0 +1,107 @@
+@keyframes heartbeat {
+  0% {
+    transform: scale(.75);
+    opacity: 1;
+  }
+  15% {
+    transform: scale(1);
+    opacity: .8;
+  }
+
+  30% {
+    transform: scale(.75);
+    opacity: 1;
+  }
+
+  45% {
+    transform: scale(1.5);
+    opacity: .6;;
+  }
+  100% {
+    transform: scale(.75);
+    opacity: .8;
+  }
+}
+@keyframes scale-up {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+    transform: scale(10);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+button.enjoy:hover {
+  cursor: pointer;
+}
+button.enjoy:after {
+  content: "\2665";
+  user-select: none;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-size: 20px;
+  opacity: 0;
+  color: rgb(var(--t-rc-primary));
+}
+button.enjoy:hover:after {
+  animation: heartbeat 1s infinite;
+}
+button.enjoy:disabled {
+  border-color: rgb(var(--t-rc-primary));
+  background-color: rgb(var(--t-rc-primary));
+  color: #fff;
+  transition-property: color, background-color;
+  transition-delay: 0s, 1s;
+  transition-timing-function: ease-in;
+  transition-duration: 0.5s, 0s;
+
+}
+button.enjoy:disabled:after {
+  animation: scale-up 2s;
+}
+button.enjoy i.has-value {
+  margin-left: 0.4em;
+  font-style: normal;
+}
+
+.entry-enjoy button {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: inline-block;
+  text-decoration: none;
+  color: #767676;
+  background-color: transparent;
+  border: 3px solid var(--un-c-divider);
+  line-height: 30px;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 0 20px;
+  cursor: pointer;
+  transition: background-color, color 0.2s ease;
+  text-transform: uppercase;
+  outline: 0;
+}
+
+.entry-enjoy button:hover {
+  cursor: pointer;
+  outline: initial;
+}
+
+.entry-enjoy button i {
+  font-style: normal;
+  margin-left: 6px;
+}

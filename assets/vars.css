@@ -1,0 +1,68 @@
+/**
+ * Variables with prefix --un for UeNo
+ *
+ * --un-c: ready to use color
+ * --un-rc: color in rgb numbers
+ * --un-s: size, e.g. width and height
+ * --un-f: font family
+ */
+:root {
+  --un-rc-base: 255, 255, 255;
+  --un-rc-invert: 0, 0, 0;
+  --un-rc-blue: 45, 140, 240;
+
+  --un-c-bg: #fff;
+  --un-c-bg-weak: #f9f9f9;
+  --un-c-bg-mute: #f1f1f1;
+
+  --un-f-sys-sans: -apple-system, "Segoe UI", Oxygen, Ubuntu, "Droid Sans", "Helvetica Neue";
+  --un-f-sys-serif: "Times New Roman", Georgia, Palatino, Times;
+  --un-f-cjk: "PingFang SC", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei";
+  --un-f-mono: Menlo, Monaco, Consolas, "Courier New", monospace;
+
+  --un-f-base: var(--un-f-sys-sans), var(--un-f-cjk), sans-serif;
+  --un-f-heading: var(--un-f-sys-sans), var(--un-f-cjk), sans-serif;
+
+  /* usually used for links */
+  --un-rc-accent: var(--t-rc-primary);
+}
+
+.dark-theme {
+  --un-rc-base: 0, 0, 0;
+  --un-rc-invert: 255, 255, 255;
+
+  --un-c-bg: #2a2c31;
+  --un-c-bg-weak: #3a3a3a;
+  --un-c-bg-mute: #444;
+
+  /* usually used for links */
+  --un-rc-accent: var(--t-rc-secondary);
+}
+
+:root {
+  --un-c-text: rgba(var(--un-rc-invert), 0.82);
+  --un-c-text-light: rgba(var(--un-rc-invert), 0.58);
+  --un-c-text-strong: rgba(var(--un-rc-invert), 0.94);
+  --un-c-text-mute: rgba(var(--un-rc-invert), 0.2);
+  --un-c-divider: rgba(var(--un-rc-invert), 0.08);
+  --un-c-divider-light: rgba(var(--un-rc-invert), 0.04);
+  --un-c-accent: rgb(var(--un-rc-accent));
+  /* set comment colors */
+  --tc-c-primary: var(--un-c-accent);
+  --tc-c-link: var(--un-c-accent);
+}
+
+.yue {
+  --yue-f-base: merriweather, var(--un-f-sys-serif), var(--un-f-cjk), serif;
+  --yue-f-quote: var(--yue-f-base);
+  --yue-f-heading: var(--un-f-heading);
+  --yue-f-mono: var(--un-f-mono);
+  --yue-c-strong: var(--un-c-text-strong);
+  --yue-c-light: var(--un-c-text-light);
+  --yue-c-accent: var(--un-c-accent);
+  --yue-c-tr: rgba(var(--un-rc-invert), 0.6);
+
+  --yue-c-bc: rgba(240, 240, 240, 0.92);
+  --yue-c-bc-bg: #21232a;
+  --yue-c-bc-gutter: #1d202d;
+}

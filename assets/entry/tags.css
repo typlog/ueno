@@ -1,0 +1,27 @@
+.entry-tags {
+  margin: 1.6em 0 1.2em;
+}
+.entry-tags a {
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: 14px;
+  color: var(--un-c-text-light);
+  background: var(--un-c-bg-weak);
+  padding: 4px 0.8em;
+  font-weight: 600;
+}
+.entry-tags a:before {
+  content: '#';
+  font-weight: 900;
+  color: rgba(var(--un-rc-invert), 0.1);
+  margin-right: 2px;
+}
+.entry-tags a:hover {
+  text-decoration: none;
+  color: rgba(var(--t-on-primary), 0.86);
+  background: rgba(var(--t-rc-primary), 0.86);
+}
+.entry-tags a + a {
+  margin-left: 4px;
+}

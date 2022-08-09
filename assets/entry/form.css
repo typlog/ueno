@@ -1,0 +1,63 @@
+.protected {
+  background-color: var(--un-c-bg-mute);
+  border-radius: 5px;
+  padding: 20px 20px 30px;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.subscribe form {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+.protected input,
+.subscribe input {
+  color: var(--un-c-text);
+  background-color: var(--un-c-bg);
+  border: 1px solid rgba(var(--un-rc-invert), 0.2);
+  border-left: solid 3px rgb(var(--t-rc-primary));
+  padding: 0 10px;
+  font-size: 16px;
+  font-family: var(--un-f-base);
+  box-sizing: border-box;
+  width: 300px;
+  margin-right: 10px;
+  outline: 0;
+  vertical-align: middle;
+  line-height: 48px;
+}
+.subscribe input {
+  width: 50%;
+}
+.protected button,
+.subscribe button {
+  display: inline-block;
+  padding: 0 20px;
+  font-size: 14px;
+  height: 48px;
+  color: rgb(var(--t-on-primary));
+  background-color: rgb(var(--t-rc-primary));
+  border: 1px solid rgb(var(--t-rc-primary));
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color,color .2s ease;
+  text-transform: uppercase;
+  vertical-align: middle;
+  outline: 0;
+}
+@media (max-width: 480px) {
+  .subscribe form {
+    display: block;
+  }
+  .protected input,
+  .subscribe input {
+    margin: 0 0 10px 0;
+    width: 100%;
+  }
+  .protected button,
+  .subscribe button {
+    margin: 0;
+    width: 100%;
+  }
+}
