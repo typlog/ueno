@@ -32,9 +32,6 @@
           {% endif %}
           <div class="e-content js-content yue dark-code" itemprop="articleBody">
             {{ render_subject_content(site, page) }}
-            {% if page.type == 'page' %}
-              {% include "_snippets/page_qr.j2" %}
-            {% endif %}
           </div>
           {% if page.tags %}
             <div class="entry-tags">

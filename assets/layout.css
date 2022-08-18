@@ -111,8 +111,7 @@ a:hover {
   font-size: 12px;
   font-weight: 300;
   text-transform: uppercase;
-  font-family: var(--sys-sans), sans-serif;
-  color: rgba(0, 0, 0, 0.5);
+  color: var(--un-c-text-light);
 }
 .side_links a {
   font-weight: 600;
@@ -134,7 +133,7 @@ a:hover {
   margin: 2em 0 1em;
 }
 .side_search input {
-  border: 2px solid rgba(0, 0, 0, 0.36);
+  border: 2px solid rgba(var(--un-rc-invert), 0.36);
   border-radius: 16px;
   padding: 4px 12px;
   font-size: 14px;
@@ -153,10 +152,6 @@ a:hover {
   padding: 0 80px;
   max-width: 680px;
 }
-.main._post article {
-  margin-bottom: 1em;
-}
-
 .main_mark:before {
   position: absolute;
   left: 0;
@@ -185,6 +180,36 @@ a:hover {
   font-size: 1.4em;
   font-weight: 400;
   color: var(--un-c-text-light);
+}
+
+.main_head.author:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.main_head .author_image {
+  float: left;
+  margin-right: 20px;
+}
+.main_head .author_image img {
+  border-radius: 50%;
+}
+.main_head .author_info {
+  overflow: hidden;
+}
+.main_head .author_info h1 {
+  font-size: 20px;
+  margin-top: 6px;
+  line-height: 1;
+}
+.main_head .author_info a {
+  text-decoration: none;
+}
+.main_head .author_info p {
+  color: var(--un-c-text-light);
+}
+.main_head .author_info p:first-of-type {
+  margin-top: 10px;
 }
 
 .home-more,
@@ -260,7 +285,7 @@ a:hover {
 .site-foot {
   padding-left: env(safe-area-inset-left);
   padding-right: env(safe-area-inset-right);
-  border-top: 1px solid rgba(0, 0, 0, 0.04);
+  border-top: 1px solid var(--un-c-divider-light);
 }
 .site-foot_content {
   font-family: var(--un-f-base);

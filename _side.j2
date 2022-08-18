@@ -14,17 +14,6 @@
       {% elif podcast.description %}
         <h2 class="side_subtitle">{{ podcast.description }}</h2>
       {% endif %}
-    {% elif page and page.type == 'author' %}
-      {% set author = page.topic %}
-      {% if author.avatar %}
-        <a class="side_logo" href="{{ linkify(author.url) }}">
-          <img src="{{ author.avatar|thumbnail('ss') }}" alt="{{ author.name }}" width="120" height="120">
-        </a>
-      {% endif %}
-      <h1 class="side_title"><a class="h-card" rel="me" href="{{ linkify(author.url) }}">{{ author.name }}</a></h1>
-      {% if author.bio %}
-        <h2 class="side_subtitle">{{ author.bio }}</h2>
-      {% endif %}
     {% else %}
       {% if site.logo %}
         <a class="side_logo" href="{{ linkify('/') }}"><img src="{{ site.logo.src|thumbnail('ss') }}" alt="{{ site.name }}" width="120" height="120"></a>
@@ -64,8 +53,7 @@
       {% endif %}
     </nav>
     <div class="side_search">
-      <input class="js-search" type="text" placeholder="Search..."
-        {% if features.algolia %}data-id="{{ site.algolia_id }}" data-key="{{ site.algolia_key }}"{% endif %}>
+      <input class="js-search" type="text" placeholder="Search...">
     </div>
   </div>
 </aside>

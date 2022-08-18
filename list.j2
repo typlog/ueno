@@ -19,6 +19,21 @@
           <section class="main_head">
             <h1>{{ page.topic.name }}</h1>
           </section>
+        {% elif page.type == 'author' %}
+          {% set author = page.topic %}
+          <section class="main_head author">
+            {% if author.avatar %}
+              <a class="author_image" href="{{ linkify(author.url) }}">
+                <img src="{{ author.avatar|thumbnail('ss') }}" alt="avatar of {{ author.name }}" width="80" height="80">
+              </a>
+            {% endif %}
+            <div class="author_info">
+              <h1><a class="h-card" rel="me" href="{{ linkify(author.url) }}">{{ author.name }}</a></h1>
+              {% if author.bio %}
+                <div>{{ author.bio }}</div>
+              {% endif %}
+            </div>
+          </section>
         {% endif %}
         {% for subject in page.items %}
           {{ render_item(site, subject) }}
