@@ -1,15 +1,17 @@
 .sponsorship {
   padding: 0;
-  margin: 1em 0;
+  margin: 1em 0 0.5em;
 }
 .sponsorship a {
   display: inline-block;
   text-decoration: none;
   color: white;
+  background: black;
   padding: 1em 2em;
   font-size: 14px;
   font-weight: 600;
   margin-right: 0.5em;
+  margin-bottom: 0.5em;
   transition: background-color 0.2s ease;
   box-sizing: border-box;
 }
