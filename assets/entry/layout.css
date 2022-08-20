@@ -76,18 +76,13 @@ time.dt-published {
   margin-bottom: 3em;
 }
 
-.e-content twitter-widget {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .e-content a {
   color: var(--un-c-text-strong);
   text-decoration: underline var(--yue-c-accent);
 }
 
 .e-content del {
-  opacity: var(--un-c-text-light);
+  color: var(--un-c-text-light);
   text-decoration: line-through var(--yue-c-accent);
 }
 
@@ -117,19 +112,6 @@ time.dt-published {
 
 .block-embed figure {
   margin: 0;
-}
-
-.block-embed .iframe_wrapper {
-  width: 100%;
-  position: relative;
-}
-
-.block-embed .iframe_wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }
 
 .block-embed.stroked iframe {
