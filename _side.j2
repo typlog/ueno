@@ -49,7 +49,7 @@
       {% if site.podcast and site.podcast.email %}
         {{ render_social_icons(site, site.podcast.email) }}
       {% else %}
-        {{ render_social_icons(site) }}
+        {{ render_social_icons(site, site.socials.email) }}
       {% endif %}
     </nav>
     <div class="side_search">
