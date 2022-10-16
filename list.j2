@@ -29,8 +29,8 @@
             {% endif %}
             <div class="author_info">
               <h1><a class="h-card" rel="me" href="{{ linkify(author.url) }}">{{ author.name }}</a></h1>
-              {% if author.bio %}
-                <div>{{ author.bio }}</div>
+              {% if author.bio_html %}
+                <div>{{ author.bio_html|safe }}</div>
               {% endif %}
             </div>
           </section>
