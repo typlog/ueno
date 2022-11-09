@@ -14,6 +14,11 @@
     <div class="main">
       <div class="main_mark inner">
         <article role="main" class="h-entry" itemscope itemtype="http://schema.org/Article">
+          {% if page.cover and page.cover.src %}
+            <div class="entry-cover">
+              <img class="u-photo" src="{{ page.cover.src|thumbnail }}" alt="{{ page.title }} cover" width="{{ page.cover.width }}" height="{{ page.cover.height }}">
+            </div>
+          {% endif %}
           <div class="entry-meta">
             {% if page.type == 'audio' %}
               {% if page.season and page.episode %}

@@ -46,13 +46,7 @@ time.dt-published {
 }
 
 .entry-cover {
-  margin-bottom: 20px;
-  padding-bottom: 60%;
-  background: var(--un-c-bg-weak) no-repeat center;
-  background-size: cover;
-}
-.entry-cover > img {
-  display: none;
+  margin-bottom: 2em;
 }
 
 .entry-audio audio {
