@@ -9,13 +9,16 @@
     {% include "./_side.j2" %}
     <div class="main">
       <div class="inner main_mark">
-        {% set subjects = query.latest_subjects() %}
+        {% set subjects = query.latest_subjects(count=10) %}
         {% for subject in subjects %}
           {{ render_item(site, subject) }}
         {% endfor %}
-        <div class="home-more">
-          <a href="{{ linkify(site.list_url) }}">MORE →</a>
-        </div>
+        {% if subjects|count == 10 %}
+          {% set last = subjects|last %}
+          <div class="home-more">
+            <a href="{{ linkify(site.list_url) }}{{last.published_at.year}}/#item-{{last.id}}">ARCHIVE →</a>
+          </div>
+        {% endif %}
       </div>
     </div>
   </div>
