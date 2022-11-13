@@ -1,4 +1,4 @@
-{% from "macros.j2" import render_item, render_navigation %}
+{% from "macros.j2" import render_item %}
 
 {% block style %}
   <link rel="stylesheet" href="{{ static_url }}ueno.css">
@@ -38,10 +38,16 @@
         {% for subject in page.items %}
           {{ render_item(site, subject) }}
         {% endfor %}
-        {{ render_navigation(site, page) }}
+        {% if page.years %}
+          <div class="navigation">
+            {% for year in page.years|reverse %}
+              {%- set url = page.base_url + year|string + '/' -%}
+              <a{% if page.year == year %} class="active"{% endif %} href="{{ linkify(url) }}">{{ year }}</a>
+            {% endfor %}
+          </div>
+        {% endif %}
       </div>
     </div>
   </div>
-  {% include "_snippets/site_foot.j2" %}
-  {% include "_snippets/brand_foot.j2" %}
+  {% include "./_foot.j2" %}
 {% endblock %}
