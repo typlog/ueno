@@ -1,0 +1,26 @@
+<div class="site-foot">
+  <div class="site-foot_content">
+    <div class="site-foot_home">
+      {% if site.logo %}
+        <a class="logo" href="{{ linkify('/') }}">
+          <img src="{{ site.logo.src|thumbnail('s') }}" alt="{{ site.name }} logo" height="32">
+        </a>
+      {% else %}
+        <a class="title" href="{{ linkify('/') }}">{{ site.name }}</a>
+      {% endif %}
+    </div>
+    <div class="site-foot_links">
+      <a href="{{ linkify(site.list_url) }}">Archive</a>
+      {% if site.posts_url and site.audios_url %}
+        <a href="{{ linkify(site.posts_url) }}">Posts</a>
+        <a href="{{ linkify(site.audios_url) }}">Episodes</a>
+      {% endif %}
+      {% if features.photo %}
+        <a href="{{ linkify('/moments/') }}">Moments</a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+<div class="typlog-foot">
+  <div>Powered by <a class="title" href="https://typlog.com/?utm_source={{ site.slug }}&utm_medium=foot">Typlog</a></div>
+</div>
