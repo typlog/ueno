@@ -60,6 +60,7 @@
   --yue-c-light: var(--un-c-text-light);
   --yue-c-accent: var(--un-c-accent);
   --yue-c-tr: rgba(var(--un-rc-invert), 0.6);
+  --yue-c-divider: var(--un-c-divider);
 
   --yue-c-bc: rgba(240, 240, 240, 0.92);
   --yue-c-bc-bg: #21232a;
